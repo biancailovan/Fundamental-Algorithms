@@ -120,37 +120,6 @@ void buildHeap_TopDown(int a[], int n)
 	
 }
 
-/*void heapify_TD(int a[], int n, int i) //Pentru varianta TopDown
-{
-	int aux;
-	int max = i;
-	int parent = i / 2;
-
-	Operation asign2 = profiler.createOperation("TopDown_asign", n);
-	Operation comp2 = profiler.createOperation("TopDown_comp", n);
-
-	if (max > 0)
-	{
-		comp2.count();
-		if (a[max] > a[parent])
-		{
-			asign2.count(3);
-			aux = a[max];
-			a[max] = a[parent];
-			a[parent] = aux;
-			//asign2.count(3);
-
-			heapify_TD(a, n, parent);
-		}
-	}
-
-}
-
-void buildHeap_TopDown(int a[], int n)
-{
-	for (int i = 0; i < n; i++)
-		heapify_TD(a,n, i);
-}*/
 
 void printHeap(int a[], int n)
 {
@@ -175,8 +144,6 @@ void Average_case()
 			FillRandomArray(a, n,10,5000,false,0);
 			memcpy(x, a, n * sizeof(a[0])); //pt a putea lucra pe acelasi sir
 			buildHeap_BottomUp(a, n);
-
-			//memcpy(x, a, n * sizeof(a[0]));
 			buildHeap_TopDown(x, n);
 
 		}
@@ -213,8 +180,6 @@ void Worst_case()
 			FillRandomArray(a, n, 10, 5000, false, ASCENDING);
 			memcpy(x, a, n * sizeof(a[0])); //pt a putea lucra pe acelasi sir
 			buildHeap_BottomUp(a, n);
-
-			//memcpy(x, a, n * sizeof(a[0]));
 			buildHeap_TopDown(x, n);
 
 	}
