@@ -30,26 +30,6 @@
 #define MAX_SIZE 2000
 Profiler profiler("Analiza si Compararea Metodelor Directe de Sortare");
 
-/*void BubbleSort(int a[], int n)
-{
-	int i, j;
-	int aux = 0;
-	Operation asign0 = profiler.createOperation("BubbleSort_asign", n);
-	Operation comp0 = profiler.createOperation("BubbleSort_comp", n);
-	for (i = 0; i < n - 1; i++)
-	{
-		for (j = 0; j < n - i - 1; j++)
-		{	comp0.count();
-			if (a[j] > a[j + 1])
-			{
-				asign0.count(3);
-				aux = a[j];
-				a[j] = a[j + 1];
-				a[j + 1] = aux;
-			}
-		}
-	}
-}*/
 
 //Bubble sort
 void BubbleSort(int a[], int n)
